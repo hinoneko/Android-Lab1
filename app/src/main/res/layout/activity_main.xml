@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@color/design_default_color_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home Ledger"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/edit_prev_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Попередні показники"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="12dp"
+        android:background="@android:drawable/editbox_background_normal"/>
+
+    <EditText
+        android:id="@+id/edit_current_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Поточні показники"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="20dp"
+        android:background="@android:drawable/editbox_background_normal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Оберіть послугу (тариф):"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/rg_tariffs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <RadioButton android:id="@+id/rb_electric"
+            android:text="Електроенергія (4.32 грн)"
+            android:layout_height="40dp"
+            android:layout_width="350dp" />
+        <RadioButton android:id="@+id/rb_water"
+            android:text="Водопостачання (30.384 грн)"
+            android:layout_height="40dp"
+            android:layout_width="350dp" />
+        <RadioButton android:id="@+id/rb_gas"
+            android:text="Газ (7.96 грн)"
+            android:layout_height="40dp"
+            android:layout_width="350dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_calculate_bill"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:text="ОК"
+        android:textSize="18sp"
+        android:backgroundTint="#4263A4"/>
+
+    <TextView
+        android:id="@+id/tv_bill_result"
+        android:layout_width="match_parent"
+        android:layout_height="199dp"
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
